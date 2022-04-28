@@ -11,6 +11,10 @@ class Ingredient(models.Model):
     unit_price = models.FloatField(default=0.0)
 
 
+def __str__(self):
+    return self.unit + " " + self.quantity + " " + self.name
+
+
 class MenuItem(models.Model):
     title = models.CharField(max_length=50)
     price = models.FloatField(default=0.0)
